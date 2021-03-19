@@ -1,35 +1,41 @@
-# DevMastery Comments Microservice API
-To manage comments on various Dev Mastery properties.
+# Easeget
+The server-side for the ease-get mobile app
 
-[Using Clean Architecture for Microservice APIs in Node.js with MongoDB and Express](https://www.youtube.com/watch?v=CnailTcJV_U)
-
-> In this video we talk about Bob Martin's Clean Architecture model and I will show you how we can apply it to a Microservice built in node.js with MongoDB and Express JS - @arcdev1
+[
 
 ## Features
 * XSS Protection (via [sanitize-html](https://www.npmjs.com/package/sanitize-html))
-* Flags Spam (via [Akismet](https://akismet.com/))
-* Flags rude or inappropriate language (English only via [Content Moderator](https://contentmoderator.cognitive.microsoft.com))
-* Flags personally identifiable information (English only via [Content Moderator](https://contentmoderator.cognitive.microsoft.com))
+
 
 ## Running Locally
 
 #### Prerequisites
 * [Git](https://git-scm.com/downloads)
 * [Node JS](https://nodejs.org/en/)
-* [Mongo DB](https://www.mongodb.com) (To use the Mongo DB interface as shown in the Mastery Monday youtube video, you need to install Mongo Compass)
-* [Azure Content Moderator account (free)](https://contentmoderator.cognitive.microsoft.com)
-* [Akismet Developer account (free)](https://akismet.com/development/api/#getting-started)
-
+* [Mongo DB](https://www.mongodb.com)
+* [Vonyage Account](https://www.vonage.com)
 
 #### 1. Clone the repo and install dependencies
 ```bash
 git clone 
-cd comments-api
+cd easeget
 npm i
 ```
 
 #### 2. Modify the .env file
-Save `sampledotenv` as `.env` and then add your database and Content Moderator + Akismet API details.
+Save `sampledotenv` as `.env` 
+```
+e.g
+
+EG_API_ROOT=/egapi/v1
+MONGODB_URL=mongodb://127.0.0.1:27017
+DEVPORT=3000
+GMAIL_USER=test@gmail.com
+GMAIL_PASS=testpassword
+VONYAGE_API_KEY=hjgghhj
+VONYAGE_API_SECRET=7bghjghjhjghj
+
+```
 
 #### 3. Startup your MongoDB
 Usually this is just: `mongod` on the command line.

@@ -1,8 +1,7 @@
 const Nexmo = require('nexmo')
-
 const nexmo = new Nexmo({
-  apiKey: 'd6b1165f',
-  apiSecret: '7ujCLYkiqmAwCjil'
+  apiKey: process.env.VONYAGE_API_KEY,
+  apiSecret: process.env.VONYAGE_API_SECRET
 })
 
 let sendNotification = {
