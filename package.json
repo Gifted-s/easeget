@@ -1,0 +1,61 @@
+{
+  "name": "user-management-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d dist",
+    "now-build": "npm run build",
+    "clean": "rimraf dist",
+    "db": "babel-node ./db/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "start": "npm run clean && npm run build && npm run db && cd dist && node index.js",
+    "test": "jest src --watch",
+    "test:e2e": "jest ./__test__ --runInBand"
+  },
+  "author": "Adewumi Sunkanmi",
+  "license": "MIT",
+  "jest": {
+    "verbose": false,
+    "globalSetup": "./jest-setup.js",
+    "globalTeardown": "./jest-teardown.js",
+    "testEnvironment": "./jest-mongo.js"
+  },
+  "dependencies": {
+    "@devmastery/pipe": "*",
+    "axios": "*",
+    "babel-plugin-inline-dotenv": "*",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cuid": "*",
+    "elastic-apm-node": "^3.6.1",
+    "express": "*",
+    "helmet": "^3.22.0",
+    "ip-regex": "*",
+    "is-valid-email": "*",
+    "mongodb": "*",
+    "jsonwebtoken": "^8.5.1",
+    "p-reduce": "*",
+    "sanitize-html": "*",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/node": "*",
+    "@babel/preset-env": "*",
+    "babel-jest": "*",
+    "dotenv": "*",
+    "eslint": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-standard": "*",
+    "faker": "*",
+    "jest": "*",
+    "mongodb-memory-server": "*",
+    "rimraf": "*"
+  }
+}
