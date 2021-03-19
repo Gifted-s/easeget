@@ -1,8 +1,6 @@
 # Easeget
 The server-side for the ease-get mobile app
 
-[
-
 ## Features
 * XSS Protection (via [sanitize-html](https://www.npmjs.com/package/sanitize-html))
 
