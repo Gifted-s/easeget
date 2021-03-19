@@ -1,5 +1,5 @@
 # Easeget
-The server-side for the ease-get mobile app
+The server-side for the ease-get mobile app, easeget allow people locate vacant rooms,houses and apartment around them
 
 ## Features
 * XSS Protection (via [sanitize-html](https://www.npmjs.com/package/sanitize-html))
